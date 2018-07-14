@@ -1,0 +1,2 @@
+For MtoA on Windows:
+You may install the shader wherever you prefer.  A good choice is C:/solidangle/mtoadeploy/shaders.  The DLL and MTD files should then go into the subdirectory /bin, and the the PY file into the subdirectory /ae.  Finally, edit your Maya.env such that ARNOLD_PLUGIN_PATH points to your /bin directory, and MTOA_TEMPLATES_PATH points to your /ae directory.  The shader should become available upon restarting Maya.  

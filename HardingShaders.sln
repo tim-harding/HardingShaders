@@ -1,0 +1,52 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HardingShaders", "HardingShaders\HardingShaders.vcxproj", "{7ADED2BD-6C90-4611-80A8-E862AF40312E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9EEE0289-D2B5-4278-BAA8-8DC434A7233A} = {9EEE0289-D2B5-4278-BAA8-8DC434A7233A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostBuild", "PostBuild\PostBuild.csproj", "{9EEE0289-D2B5-4278-BAA8-8DC434A7233A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7ADED2BD-6C90-4611-80A8-E862AF40312E}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{7ADED2BD-6C90-4611-80A8-E862AF40312E}.Debug|x64.ActiveCfg = Debug|x64
+		{7ADED2BD-6C90-4611-80A8-E862AF40312E}.Debug|x64.Build.0 = Debug|x64
+		{7ADED2BD-6C90-4611-80A8-E862AF40312E}.Debug|x86.ActiveCfg = Debug|x64
+		{7ADED2BD-6C90-4611-80A8-E862AF40312E}.Debug|x86.Build.0 = Debug|x64
+		{7ADED2BD-6C90-4611-80A8-E862AF40312E}.Release|Any CPU.ActiveCfg = Release|Win32
+		{7ADED2BD-6C90-4611-80A8-E862AF40312E}.Release|x64.ActiveCfg = Release|x64
+		{7ADED2BD-6C90-4611-80A8-E862AF40312E}.Release|x64.Build.0 = Release|x64
+		{7ADED2BD-6C90-4611-80A8-E862AF40312E}.Release|x86.ActiveCfg = Release|Win32
+		{7ADED2BD-6C90-4611-80A8-E862AF40312E}.Release|x86.Build.0 = Release|Win32
+		{9EEE0289-D2B5-4278-BAA8-8DC434A7233A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EEE0289-D2B5-4278-BAA8-8DC434A7233A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EEE0289-D2B5-4278-BAA8-8DC434A7233A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9EEE0289-D2B5-4278-BAA8-8DC434A7233A}.Debug|x64.Build.0 = Debug|Any CPU
+		{9EEE0289-D2B5-4278-BAA8-8DC434A7233A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9EEE0289-D2B5-4278-BAA8-8DC434A7233A}.Debug|x86.Build.0 = Debug|Any CPU
+		{9EEE0289-D2B5-4278-BAA8-8DC434A7233A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EEE0289-D2B5-4278-BAA8-8DC434A7233A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EEE0289-D2B5-4278-BAA8-8DC434A7233A}.Release|x64.ActiveCfg = Release|Any CPU
+		{9EEE0289-D2B5-4278-BAA8-8DC434A7233A}.Release|x64.Build.0 = Release|Any CPU
+		{9EEE0289-D2B5-4278-BAA8-8DC434A7233A}.Release|x86.ActiveCfg = Release|Any CPU
+		{9EEE0289-D2B5-4278-BAA8-8DC434A7233A}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C221658-631F-4267-B293-41027077F37E}
+	EndGlobalSection
+EndGlobal
