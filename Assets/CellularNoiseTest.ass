@@ -1,0 +1,25 @@
+options 
+{
+	xres 512
+	yres 512
+}
+
+persp_camera
+{
+	fov 45
+	position 20 20 20
+	look_at 0 0 0
+}
+
+sphere 
+{
+	shader unlit_material
+	radius 10
+}
+
+cell_noise
+{
+	name unlit_material
+	space Object
+	offset 1 1 1
+}

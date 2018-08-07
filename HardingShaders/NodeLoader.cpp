@@ -2,10 +2,12 @@
 
 extern const AtNodeMethods* DirectionalAoMethods;
 extern const AtNodeMethods* CameraTextureMethods;
+extern const AtNodeMethods* CellNoiseMethods;
 
 enum Shaders {
 	DirectionalAo,
-	CameraTexture
+	CameraTexture,
+	CellNoise
 };
 
 node_loader{
@@ -18,6 +20,11 @@ node_loader{
 	case CameraTexture:
 		node->methods = CameraTextureMethods;
 		node->name = "camera_texture";
+		break;
+
+	case CellNoise:
+		node->methods = CellNoiseMethods;
+		node->name = "cell_noise";
 		break;
 
 	default:
