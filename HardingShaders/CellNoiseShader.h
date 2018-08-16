@@ -28,7 +28,8 @@ enum class Feature
 static const char* FeatureNames[] = 
 {
 	"First",
-	"Second"
+	"Second",
+	nullptr
 };
 
 
