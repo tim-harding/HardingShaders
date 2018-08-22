@@ -12,9 +12,9 @@ enum CameraTextureParams {
 node_parameters
 {
 	AiParameterMtx("matrix", AtMatrix());
-AiParameterFlt("apertureHorizontal", 36);
-AiParameterFlt("apertureVertical", 24);
-AiParameterFlt("focalLength", 60);
+	AiParameterFlt("apertureHorizontal", 36);
+	AiParameterFlt("apertureVertical", 24);
+	AiParameterFlt("focalLength", 60);
 }
 
 node_initialize{}

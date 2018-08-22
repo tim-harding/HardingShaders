@@ -2,16 +2,18 @@
 
 extern const AtNodeMethods* DirectionalAoMethods;
 extern const AtNodeMethods* CameraTextureMethods;
-extern const AtNodeMethods* CellNoiseMethods;
+extern const AtNodeMethods* CellularMethods;
 extern const AtNodeMethods* StencilSetMethods;
 extern const AtNodeMethods* StencilGetMethods;
+extern const AtNodeMethods* BakerCameraMethods;
 
 enum Shaders {
 	DirectionalAo,
 	CameraTexture,
-	CellNoise,
+	Cellular,
 	StencilSet,
-	StencilGet
+	StencilGet,
+	BakerCamera
 };
 
 node_loader{
@@ -30,9 +32,9 @@ node_loader{
 		node->output_type = AI_TYPE_RGB;
 		break;
 
-	case CellNoise:
-		node->methods = CellNoiseMethods;
-		node->name = "cell_noise";
+	case Cellular:
+		node->methods = CellularMethods;
+		node->name = "cellular";
 		node->node_type = AI_NODE_SHADER;
 		node->output_type = AI_TYPE_RGB;
 		break;
@@ -51,6 +53,13 @@ node_loader{
 		node->output_type = AI_TYPE_INT;
 		break;
 
+	case BakerCamera:
+		node->methods = BakerCameraMethods;
+		node->name = "baker_camera";
+		node->node_type = AI_NODE_CAMERA;
+		node->output_type = AI_TYPE_NONE;
+		break;
+
 	default:
 		return false;
 	}
@@ -58,4 +67,4 @@ node_loader{
 
 	strcpy_s(node->version, AI_VERSION);
 	return true;
-} 
+}
