@@ -1,5 +1,5 @@
 # Harding Shaders
-Harding Shaders is a collection of utility shaders for the Arnold Renderer.  See the [wiki](https://github.com/timmythetiny/HardingShaders/wiki) for details on what's included.
+Harding Shaders is a collection of utility shaders for the [Arnold Renderer](https://www.solidangle.com/arnold/).  See the [wiki](https://github.com/timmythetiny/HardingShaders/wiki) for details on what's included.
 
 
 ## Maya installation
