@@ -3,7 +3,7 @@ Harding Shaders is a collection of utility shaders for the Arnold Renderer.  See
 
 
 ## Maya installation
-Download the [latest release](https://github.com/timmythetiny/HardingShaders/releases) and unzip it.  In the following steps, you may choose to install files anywhere, though a common choice would be C:\solidangle\mtoadeploy\shaders, or a network location if sharing with a studio.  Copy the folders `bin` and `ae` from the Assets folder to your install location, and then copy the file HardingShaders.dll to the `bin` folder as well.  In your Maya.env, add the variable ARNOLD_PLUGIN_PATH pointing to your `bin` folder, and the variable MTOA_TEMPLATES_PATH pointing to your `ae` folder.  The shaders should be available the next time you open Maya.
+Download the DLL and source code from the [latest release](https://github.com/timmythetiny/HardingShaders/releases) and unzip it.  In the following steps, you may choose to install files anywhere, though a common choice would be C:\solidangle\mtoadeploy\shaders, or a network location if sharing with a studio.  Copy the folders `bin` and `ae` from the unzipped source code Assets folder to your install location, and then copy the file HardingShaders.dll to the `bin` folder as well.  In your Maya.env, add the variable ARNOLD_PLUGIN_PATH pointing to your `bin` folder, and the variable MTOA_TEMPLATES_PATH pointing to your `ae` folder.  The shaders should be available the next time you open Maya.
 
 
 ## Building for Windows
