@@ -42,7 +42,7 @@ node_loader{
 	case StencilSet:
 		node->methods = StencilSetMethods;
 		node->name = "stencil_set";
-		node->node_type = AI_NODE_SHADER;
+		node->node_type = AI_NODE_SHADER; 
 		node->output_type = AI_TYPE_CLOSURE;
 		break;
 
@@ -53,17 +53,9 @@ node_loader{
 		node->output_type = AI_TYPE_INT;
 		break;
 
-	case BakerCamera:
-		node->methods = BakerCameraMethods;
-		node->name = "baker_camera";
-		node->node_type = AI_NODE_CAMERA;
-		node->output_type = AI_TYPE_NONE;
-		break;
-
 	default:
 		return false;
 	}
-
 
 	strcpy_s(node->version, AI_VERSION);
 	return true;
