@@ -96,3 +96,17 @@
 
 	[attr stencil]
 		maya.name 			STRING stencil
+
+
+[node pixelate]
+    maya.name               STRING "aiPixelate"
+    maya.id                 INT    0x2b874c57
+    maya.classification     STRING "shader/surface"
+    maya.output_name        STRING "outColor"
+    maya.output_shortname   STRING "out"
+
+    [attr input]
+        maya.name           STRING input
+
+    [attr resolution]
+        maya.name           STRING resolution

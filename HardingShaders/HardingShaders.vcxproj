@@ -170,6 +170,7 @@
     <ClCompile Include="DirectionalAoShader.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="NodeLoader.cpp" />
+    <ClCompile Include="PixelateShader.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
