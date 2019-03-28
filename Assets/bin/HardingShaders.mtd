@@ -57,23 +57,23 @@
 	maya.output_shortname   STRING "out"
 
 	[attr octaves]
-		maya.name 			STRING octaves
+		maya.name 			STRING "octaves"
 		min					INT    1
 
 	[attr feature]
-		maya.name 			STRING feature
+		maya.name 			STRING "feature"
 
 	[attr space]
-		maya.name 			STRING space
+		maya.name 			STRING "space"
 
 	[attr scale]
-		maya.name 			STRING scale
+		maya.name 			STRING "scale"
 
 	[attr offset]
-		maya.name 			STRING offset
+		maya.name 			STRING "offset"
 
 	[attr position]
-		maya.name 			STRING position
+		maya.name 			STRING "position"
 
 
 [node stencil_set]
@@ -84,7 +84,7 @@
 	maya.output_shortname	STRING "out"
 
 	[attr stencil]
-		maya.name 			STRING stencil
+		maya.name 			STRING "stencil"
 
 
 [node stencil_get]
@@ -95,7 +95,7 @@
 	maya.output_shortname	STRING "out"
 
 	[attr stencil]
-		maya.name 			STRING stencil
+		maya.name 			STRING "stencil"
 
 
 [node pixelate]
@@ -106,7 +106,28 @@
     maya.output_shortname   STRING "out"
 
     [attr input]
-        maya.name           STRING input
+        maya.name           STRING "input"
 
     [attr resolution]
-        maya.name           STRING resolution
+        maya.name           STRING "resolution"
+
+
+
+[node write_float_additive]
+    maya.name               STRING "aiWriteFloatAdditive"
+    maya.id                 INT    0x9c456e1d
+    maya.classification     STRING "shader/surface"
+    maya.output_name        STRING "outColor"
+    maya.output_shortname   STRING "out"
+
+    [attr beauty]
+        linkable            BOOL   true
+        maya.name           STRING "beauty"
+
+    [attr input]
+        linkable            BOOL   true
+        maya.name           STRING "input"
+
+    [attr aov_name]
+        linkable            BOOL   true
+        maya.name           STRING "aov_name"

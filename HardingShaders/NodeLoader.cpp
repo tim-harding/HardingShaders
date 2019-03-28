@@ -7,6 +7,7 @@ extern const AtNodeMethods* StencilSetMethods;
 extern const AtNodeMethods* StencilGetMethods;
 extern const AtNodeMethods* BakerCameraMethods;
 extern const AtNodeMethods* PixelateMethods;
+extern const AtNodeMethods* WriteFloatAdditiveMethods;
 
 enum Shaders {
 	DirectionalAo,
@@ -14,7 +15,8 @@ enum Shaders {
 	Cellular,
 	StencilSet,
 	StencilGet,
-	Pixelate
+	Pixelate,
+	WriteFloatAdditive,
 };
 
 node_loader{
@@ -29,7 +31,7 @@ node_loader{
 		node->methods = CameraTextureMethods;
 		node->name = "camera_texture";
 		node->output_type = AI_TYPE_RGB;
-		break;
+		break; 
 
 	case Cellular:
 		node->methods = CellularMethods;
@@ -55,6 +57,12 @@ node_loader{
 		node->output_type = AI_TYPE_RGB;
 		break;
 
+	case WriteFloatAdditive:
+		node->methods = WriteFloatAdditiveMethods;
+		node->name = "write_float_additive";
+		node->output_type = AI_TYPE_RGB;
+		break;
+
 	default:
 		return false;
 	}
@@ -62,4 +70,4 @@ node_loader{
 	node->node_type = AI_NODE_SHADER;
 	strcpy_s(node->version, AI_VERSION);
 	return true;
-} 
+}

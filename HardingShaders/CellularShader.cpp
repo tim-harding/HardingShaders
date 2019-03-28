@@ -41,7 +41,7 @@ shader_evaluate
 		AiShaderEvalParamVec(static_cast<int>(NodeParameters::Position))
 	};
 
-	sg->out.RGB() = Evaluate(sg, params);
+	sg->out.RGB() = Evaluate(sg, params); 
 }
 
 

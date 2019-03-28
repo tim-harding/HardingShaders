@@ -1,7 +1,8 @@
 import pymel.core as pm
 import maya.cmds as cmds
 from mtoa.ui.ae.shaderTemplate import ShaderAETemplate
- 
+
+
 class AEaiCameraTextureTemplate(ShaderAETemplate):
 
     def setup(self):
@@ -16,11 +17,10 @@ class AEaiCameraTextureTemplate(ShaderAETemplate):
         self.addExtraControls()
         self.endScrollLayout()
 
-
     def camera_select_new(self, node_name):
         self.camera_menu = cmds.optionMenu(
-            label="Camera", 
-            changeCommand=self.camera_select_change, 
+            label="Camera",
+            changeCommand=self.camera_select_change,
             beforeShowPopup=self.refresh_menu,
             visibleChangeCommand=self.refresh_menu
         )
@@ -31,24 +31,21 @@ class AEaiCameraTextureTemplate(ShaderAETemplate):
         except Exception:
             camera = self.get_filtered_cameras()[0]
             cmds.addAttr(dataType='string', longName='camera_name')
-            cmds.setAttr(self.nodeAttr('camera_name'), camera, type='string')           
+            cmds.setAttr(self.nodeAttr('camera_name'), camera, type='string')
 
         self.update_shader_parameters()
 
-       
     def camera_select_replace(self, node_name):
         pass
-
 
     def camera_select_change(self, selection):
         cmds.setAttr(self.nodeAttr('camera_name'), selection, type='string')
         self.update_shader_parameters()
 
-
     def refresh_menu(self, *args):
         # Clear out old items
         items = cmds.optionMenu(self.camera_menu, q=True, itemListLong=True)
-        if items != None:
+        if items is not None:
             for item in items:
                 cmds.deleteUI(item, menuItem=True)
 
@@ -67,33 +64,31 @@ class AEaiCameraTextureTemplate(ShaderAETemplate):
                 # select is 1-indexed
                 cmds.optionMenu(self.camera_menu, e=True, select=i + 1)
 
-
     def update_shader_parameters(self):
         camera_name = cmds.getAttr(self.nodeAttr('camera_name'))
         cmds.connectAttr(
-            '{}.focalLength'.format(camera_name), 
-            self.nodeAttr('camera_focalLength'), 
-            force=True
-        )
-        
-        cmds.connectAttr(
-            '{}.horizontalFilmAperture'.format(camera_name), 
-            self.nodeAttr('camera_apertureHorizontal'), 
+            '{}.focalLength'.format(camera_name),
+            self.nodeAttr('camera_focalLength'),
             force=True
         )
 
         cmds.connectAttr(
-            '{}.verticalFilmAperture'.format(camera_name), 
-            self.nodeAttr('camera_apertureVertical'), 
+            '{}.horizontalFilmAperture'.format(camera_name),
+            self.nodeAttr('camera_apertureHorizontal'),
             force=True
         )
 
         cmds.connectAttr(
-            '{}.parentMatrix'.format(camera_name), 
-            self.nodeAttr('camera_matrix'), 
+            '{}.verticalFilmAperture'.format(camera_name),
+            self.nodeAttr('camera_apertureVertical'),
             force=True
         )
 
+        cmds.connectAttr(
+            '{}.parentMatrix'.format(camera_name),
+            self.nodeAttr('camera_matrix'),
+            force=True
+        )
 
     def get_filtered_cameras(self):
         cameras = []
